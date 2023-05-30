@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="initial-scale=1.0,width=device-width" /> 
+<!--[if lt IE 9]>
+[removed][removed]
+<![endif]--> 
+<style type="text/css">
+<!--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    margin:0;
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    line-height:100%;
+    font-size:14px;
+    background: #f9f9f9;
+    color: #333333;
+    -webkit-text-size-adjust: 100%;/*文字サイズ自動調整させない*/
+}
+ul{ list-style: none;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix{ clear:both;}
+* html .clearfix{ height:1%;}
+a img{ border:0;}
+a:hover img{
+    filter:alpha(opacity=80);
+    -moz-opacity:0.80;
+    opacity:0.80;
+}
+a:link {
+    color:#000099;
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color:#000099;
+}
+a:hover {
+    text-decoration: underline;
+    color: #000099;
+}
+a:active {
+    text-decoration: none;
+    color:#000099;
+}
+.pc_none{ display: none;}
+
+.mt0{ margin-top: 0 !important;}
+
+.pt0{ padding-top: 0 !important;}
+.pt10{ padding-top: 10px !important;}
+.pt20{ padding-top: 20px !important;}
+.pt30{ padding-top: 30px !important;}
+.pt40{ padding-top: 40px !important;}
+.pt50{ padding-top: 50px !important;}
+.pt60{ padding-top: 60px !important;}
+.pt70{ padding-top: 70px !important;}
+.pt80{ padding-top: 80px !important;}
+.pt90{ padding-top: 90px !important;}
+.pt100{ padding-top: 100px !important;}
+
+.pb0{ padding-bottom: 0 !important;}
+.pb10{ padding-bottom: 10px !important;}
+.pb20{ padding-bottom: 20px !important;}
+.pb30{ padding-bottom: 30px !important;}
+.pb40{ padding-bottom: 40px !important;}
+.pb50{ padding-bottom: 50px !important;}
+.pb60{ padding-bottom: 60px !important;}
+.pb70{ padding-bottom: 70px !important;}
+.pb80{ padding-bottom: 80px !important;}
+.pb90{ padding-bottom: 90px !important;}
+.pb100{ padding-bottom: 100px !important;}
+
+.font13{ font-size: 13px;}
+.txt_bold{ font-weight: bold;}
+.txt_left { text-align:left;}
+.txt_center { text-align:center;}
+.txt_right { text-align:right;}
+
+.valign_top{ vertical-align: top;}
+
+.bg_fabl01{
+    background:#1c2569;
+    color: #fff;
+}
+.bg_fabl02{
+    background:#00afec;
+    color: #fff;
+}
+.bg_fudo{
+    background:#0092d8;
+    color: #fff;
+}
+.bg_kabu{
+    background:#2c4198;
+    color: #fff;
+}
+.bg_fx{
+    background:#d7063a;
+    color: #fff;
+}
+.bg_orange{
+    background:#e95520;
+    color: #fff;
+}
+.bg_white {
+        background: #ffffff;
+        width:700px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+.txt_fabl01{ color:#1c2569;}
+.txt_fabl02{ color:#00afec;}
+.txt_fudo{ color:#0092d8;}
+.txt_kabu{ color:#2c4198;}
+.txt_fx{ color:#d7063a;}
+.txt_orange{ color: #e95520;}
+
+.table_fabl01{ border: 1px solid #1c2569;}
+.table_fabl02{ border: 1px solid #00afec;}
+.table_kabu{ border:1px solid #2c4198;}
+.table_fudo{ border:1px solid #0092d8;}
+.table_fx{ border:1px solid #d7063a;}
+.table_orange{ border:1px solid #e95520;}
+
+/* table */
+table{
+    table-layout: fixed;
+    width: 100%;
+    border: 0;
+    border-collapse:collapse;
+    padding:0;
+}
+.cont01 {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #FFFFFF;
+}
+.table01 th{
+    padding:20px 10px;
+    font-weight:normal;
+    text-align:center;
+}
+#learning .table01 th{
+    width: 310px;
+    padding: 20px;
+    font-weight: normal;
+    text-align: left;
+}
+#learning .table01 th .img01{
+    border: 1px solid #e95520;
+    padding: 20px 10px;
+    text-align: center;
+}
+#learning .table01 th .img01 h3{
+    font-size: 16px;
+    padding-top: 10px;
+}
+#learning .table01 th .img01 .txt{
+    line-height: 20px;
+    font-size: 13px;
+    padding-top: 10px;
+}
+.table02 th{
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+.table03{
+    margin: 20px auto;
+    width: 94%;
+    text-align: center;
+}
+.table03 th{
+    width: 50%;
+    padding: 15px 10px;
+}
+.table04 th{
+    width: 50%;
+    padding: 20px 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.table03 th .img_caption,
+.table04 th .img_caption{
+    font-size:16px;
+    font-weight:bold;
+    line-height:24px;
+    padding-top:10px;
+}
+
+/* btn */
+
+.btn01{
+    width: 300px;
+    border: 0;
+    border-collapse:collapse;
+    padding:0;
+    margin:0 auto;
+}
+.btn01 .ttl{
+    width: 255px;
+    height: 70px;
+    vertical-align: middle;
+    color:#FFFFFF;
+    padding:10px 0px 10px 40px;
+    font-size:18px;
+    line-height:24px;
+    font-weight:bold;
+    text-align:center;
+　background: #FFFFFF
+}
+.btn01 .arw{
+    width: 45px;
+    vertical-align: middle;
+    text-align: left;
+}
+.btn02{
+  width:300px;
+  border:#ddd 5px solid;
+  border-radius:10px;
+  padding:10px;
+  margin:0 auto;
+  background:#fff;
+}
+
+/* img */
+.img02{ text-align: center;}
+.imgbox02 img{
+    display:block;
+    width: 90%;
+    height: auto;
+    margin:0 auto;
+}
+
+/* トップエリア */
+.caution_top{
+    padding: 10px 15px 5px;
+    text-align: right;
+    font-size: 10px;
+}
+.hdlogo{ padding:10px 5px 15px;}
+.titleh1{ padding:20px 15px 15px;}
+.titleh1 h1{
+    color:#15165A;
+    text-align:right;
+    font-size:20px;
+    font-weight:bold;
+}
+.imgbox01{
+    display: block;
+    width: 100%;
+}
+.imgbox01 img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.mapbox01{
+    display: block;
+    max-width: 350px;
+    background: #fff;
+    float:left;
+}
+
+.border01{
+    width: 100%;
+    background: #15165A;
+    padding-top: 10px;
+}
+.border02{
+    width: 100%;
+    background: #15165A;
+    padding-top: 1px;
+}
+
+/* コンテンツエリア */
+.txtbox01{ padding: 20px 30px;}
+.txtbox01 p{
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.titleh2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.titleh2 img{
+    display: block;
+    margin:0 auto 5px;
+}
+.titleh2 .sub{
+    color: #333;
+    font-size:13px;
+    line-height:20px;
+    font-weight:bold;
+    display: block;
+}
+.caution_ttl{
+    font-size: 12px;
+    line-height: 13px;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.face{ width: 80px;}
+.face_caption p.name{
+    font-size:13px;
+    line-height:20px;
+    padding-bottom:5px;
+}
+.face_caption p.comment{
+    font-weight:normal;
+    font-size:13px;
+    line-height:20px;
+    padding:5px 8px;
+}
+.icn01{
+    width: 30px;
+    text-align: left;
+    vertical-align: top;
+    font-size:19px;
+    line-height:24px;
+    font-weight:bold;
+}
+.table_kabu .icn01{ color:#2c4198;}
+.table_fudo .icn01{ color:#0092d8;}
+.table_fx .icn01{ color:#d7063a;}
+.icn01_txt{
+    vertical-align: top;
+    font-weight: normal;
+    line-height:24px;
+    padding-bottom:10px;
+}
+.pd_table{
+    padding: 15px 10px;
+    text-align: left;
+}
+.temp_voice{
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+.course{ padding: 10px;}
+.course h3{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 24px;
+    text-align: center;
+}
+.course.table_fabl02 h3.name{ border-bottom: 1px solid #00afec;}
+.course.table_fabl02 h3.price{ border-top: 1px solid #00afec;}
+.course ul.list{
+    list-style: disc outside;
+    padding: 5px 10px 15px 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+.course ul.list li{
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.mark{ background: linear-gradient(transparent 60%, #d2f4dd 80%);}
+
+/* フッターエリア */
+#footer{
+    padding-top:20px;
+    padding-bottom:10px;
+}
+#footer h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+#footer .footertxt{
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+#footer .footertxt a{ color: #45a8de;}
+#footer .table_ft th{
+    width: 50%;
+    font-weight:normal;
+    text-align:left;
+}
+#footer .table_ft .info01 ul{
+    margin-bottom: 20px;
+    padding-left: 100px;
+}
+#footer .table_ft .info02 ul{
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+#footer .table_ft th li{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    padding-top: 20px;
+}
+#footer .table_ft th li a{
+    font-weight: bold;
+    color: #666;
+}
+#footer .snstable .space{ width: 10%;}
+#footer .snstable .sns_icn{
+    width: 20%;
+    text-align: center;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .pc_none{ display:inherit;}
+    .sp_none{ display:none;}
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .face img{ width: 80px;}
+
+    .cont01 .header {
+        width: 100%!important;
+        height: auto;
+        clear: both;
+    }
+
+    /*h1上部タイトル*/
+    .titleh1 h1{
+        font-size:16px;
+        text-align:left;
+    }
+
+
+    .imgbox02 img {
+        width: 95%!important;
+        height: auto!important;
+    }
+    .imgbox01 {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .bar {
+        color: #CCCCCC;
+        background: #15165A;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .txtbox01{ padding: 20px!important;}
+    .txtbox01 p {
+        line-height: 20px;
+        padding-bottom: 10px;
+    }
+
+
+    /*共通フッタ*/
+    /*    #footer h1 {
+    text-align: left;
+    padding-left:5%!important;
+}*/
+    .footertxt {
+        text-align: left!important;
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 5%!important;
+    }
+    .footertxt a {
+        color: #45a8de;
+    }
+    .table_ft th{
+        width:100%!important;
+        display:block!important;
+    }
+    .table_ft th ul {
+        float: none!important;
+        width: 95%!important;
+        margin-bottom: 0px!important;
+        padding-left: 5%!important;
+    }
+    .table_ft th li {
+        font-size: 12px;
+        line-height: 20px;
+        color: #666666;
+        padding-top: 10px;
+    }
+    .table_ft th li a {
+        font-weight: bold;
+        color: #666666;
+    }
+    #footer .snstable {
+        /*width: 150px;*/
+        margin:20px auto;
+    }
+    #footer td {
+        text-align: center;
+    }
+    #footer {
+        padding-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .hdlogo h1 img {
+        height: auto;
+        width: 150px!important;
+    }
+    #footer h1 img {
+        width: 200px;
+    }
+    #footer td img {
+        height: auto;
+        width: 32px;
+    }
+
+
+    /*画像タイトル*/
+    .hit1{
+        height:30px!important;
+        width:auto!important;
+    }
+    .hit2 {
+        height: 20px!important;
+        width:auto!important;
+    }
+    .hit3 {
+        height: 46px!important;
+        width:auto!important;
+    }
+
+    /*Learningアイコンテーブル*/
+
+    .table01 tr,
+    .table02 tr,
+    .table03 tr,
+    .table04 tr{
+        display:block!important;
+    }
+    .table01 th,
+    .table03 th{
+        list-style:none!important;
+        width: 90%!important;
+        padding:15px 5%!important;
+        display: block!important;
+        margin: 0 auto;
+    }
+    .table04 th{
+        width: 100%;
+        padding:15px 5%;
+        display: block;
+    }
+    .pd_table{
+        padding:15px 5%!important;
+    }
+    .table02 th{
+        list-style:none!important;
+        width: 100%!important;
+        padding:15px 0%!important;
+        display: block!important;
+    }
+
+    /*Voice*/
+    #voice .v1 img,
+    #voice2 .v1 img {
+        height: auto;
+        width: 15px!important;
+    }
+
+    /*グラフ画像*/
+    .img02 img {
+        height: 180px!important;
+        width: auto;
+    }
+}
+.course ul.list{
+    list-style: disc outside;
+    padding: 5px 10px 15px 15px;
+    line-height: 20px;
+    font-weight: normal;}
+.course ul.list li{
+    font-size: 13px;
+    padding-top: 10px;}
+.go1{
+    line-height: 30px;
+    margin: 0px 10px 10px 10px;
+}
+.go2{
+    margin-bottom: 10px;
+}
+.go3{
+     list-style: disc;
+     line-height: 30px;
+     font-weight: bold;
+     margin: 0px 10px 10px 10px;
+}
+.go4{
+     color: #1C2368;
+     font-weight: bold;
+     font-size: 13px;
+     line-height: 30px;
+     border-bottom: 1px dotted;
+}
+.go5{
+    font-size: 13px;
+    list-style: disc;
+    line-height: 30px;
+    margin: 0px 10px 10px 10px;
+}
+.go6{
+    color: #1C2368;
+    font-weight: bold;
+    font-size: 13px;
+}
+.go7{
+     font-size: 12px;
+     margin-top: 40px;
+}
+.goh1{
+    line-height: 25px;
+}
+
+-->
+</style> 
+</head> 
+<!-- bodyここから --> 
+<body> 
+<table class="cont01"> 
+<tbody> 
+<tr> 
+<td class="hdlogo"><h1><a href="https://www.f-academy.jp/"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/logo.png" alt="Financial Academy" width="210" height="28" /></a></h1></td> 
+</tr> 
+<tr> 
+<td class="titleh1"><h1></h1></td> 
+</tr> 
+<!-- メイン画像 ここから --> 
+<tr> 
+<td class="imgbox01"><img src="https://www3.f-academy.jp/img/mail/other/210726_bonboot_head.png" width="700" height="352" /></td> 
+</tr> 
+<!-- メイン画像 ここまで --> 
+<tr> 
+<td class="border01"></td> 
+</tr> 
+<!-- コンテンツエリアここから --> 
+<tr> 
+<td class="txtbox01"> 
+<!--本文--> <p> </p><p>今年の盆休みは、投資ブートキャンプで決まり！<br /> 「Bon Booooooot!!」で自分を変えていきましょう。</p> <p>「Bon Booooooot!!」とは投資の王道とも言える「株式投資」「不動産投資」「外貨投資・FX」を、それぞれ4日間という超短期間で学びきる、この時期だけの特別集中プログラムです。</p> <p>学習領域は、基本中の基本である「各投資の仕組み」から、成果を出すために必要な「様々なテクニック」まで、妥協することなく全範囲を網羅します。</p> <p>また、通常の授業で行っている「オンラインLIVE授業」に加え、短期間でも消化不良なく学びきるための「参加型ワークアウト」や、切磋琢磨しあうメンバーとの「オンラインフレンドシップミーティング」により、成果を出せる投資家への第一歩を、達成感を持って踏み出すことが可能です。</p> <p>「Bon Booooooot!!」は各スクール限定30名となっています。<br /> 短期間で集中して学び、いち早く成果をだしたい人はぜひ参加ください。</p> 
+<hr /> <p></p> 
+<center>
+ 投資ブートキャンプ『Bon Booooooot!!』概要 
+</center><p></p> <p>【日程】</p> <p>■不動産投資スクール<br /> ▷2021年 8月7日(土)・8月8日(日)・8月9日(月)・8月16日(月)</p> <p>■株式投資スクール<br /> ▷2021年8月13日(金)・8月14日(土)・8月15日(日)・8月16日(月)</p> <p>■外貨投資・FXスクール<br /> ▷2021年8月13日(金)・8月14日(土)・8月15日(日)・8月16日(月)</p> <p>【時間割】</p> <p>＜1日目〜3日目＞</p> <p>■各スクール共通<br /> 09:55-10:00 ラジオ体操<br /> 10:00-10:05 インプットワークアウト<br /> 10:00-11:30 授業1<br /> 12:15-13:45 授業2<br /> 14:00-15:30 授業3<br /> 15:45-17:15 授業4<br /> 17:15-17:45 質問タイム<br /> 17:45-18:00 アウトプットワークアウト<br /> 18:30-19:30 オンラインフレンドシップミーティング（2日目のみ／任意参加）</p> <p>＜4日目＞</p> <p>■不動産投資スクール<br /> 16:55-17:00 ラジオ体操<br /> 17:00-17:05 インプットワークアウト<br /> 17:00-18:30 授業1<br /> 18:45-20:15 授業2<br /> 20:30-22:00 授業3<br /> 22:00-22:30 質問タイム<br /> 22:30-22:45 アウトプットワークアウト</p> <p>■株式投資スクール／外貨投資・FXスクール<br /> 09:55-10:00 ラジオ体操<br /> 10:00-10:05 インプットワークアウト<br /> 10:00-11:30 授業1<br /> 12:15-13:45 授業2<br /> 14:00-15:30 授業3<br /> 15:30-16:00 質問タイム<br /> 16:00-16:15 アウトプットワークアウト</p> <p>【受講方法】<br /> オンラインLIVE受講</p> <p>※WEB会議システムZoomを使いリアルタイムに受講します。（顔出し不要です。）<br /> ※任意参加の「オンラインフレンドシップミーティング」のみ、交流目的のため、顔出しでの参加となります。</p> <p>【対象スクール】<br /> 株式投資スクール／不動産投資スクール／外貨投資・FXスクール</p> <p>【定員】<br /> 各スクール 限定30名（先着）<br /> ※定員になり次第、受付を締め切ります。</p> <p>【補足】<br /> 全4日間の参加を推奨しますが、参加できない場合は、収録した授業動画で受講が可能です。<br /> 『Bon Booooooot!!』参加者は、申込みスクールを2年間何度でも受講することが可能です。</p> <p>【スクールカリキュラム内容】</p> <p><a href="https://www.f-academy.jp/school/fudo.html?psn=18047">■不動産投資スクール</a><br /> 1. 不動産投資の世界<br /> 2. 利回りで収益評価<br /> 3. ROIとキャッシュフロー<br /> 4. 積算評価と稼働<br /> 5. 物件取得戦略<br /> 6. 物件探しの習慣化<br /> 7. 買い付けと価格交渉のテクニック<br /> 8. 売買契約と重要事項説明書<br /> 9. 融資の仕組みと方法<br /> 10. 融資の具体的テクニック<br /> 11. 保有物件の管理<br /> 12. 物件のバリューアップ<br /> 13. 空室を埋め、物件の価値を高める<br /> 14. 税金マネジメント<br /> 15. 出口戦略と資産拡大</p> <p><a href="https://www.f-academy.jp/school/kabu.html?psn=18047">■株式投資スクール</a><br /> 1. 株式投資の3つの基本<br /> 2. 買いタイミングの考え方<br /> 3. 売りタイミングの考え方<br /> 4. 取引の仕組み<br /> 5. 株式とは何か<br /> 6. 決算スケジュールとチェック法<br /> 7. 決算発表と株価変動の事例研究<br /> 8. 財務諸表の全体像<br /> 9. 財務三表の分析<br /> 10. 財務諸表分析の事例研究<br /> 11. 全体相場の分析<br /> 12. 定性分析<br /> 13. テクニカル分析（チャートの基本）<br /> 14. テクニカル分析（チャートの応用）<br /> 15. リスク管理と投資の心理学</p> <p><a href="https://www.f-academy.jp/school/fx.html?psn=18047">■外貨投資・FXスクール</a><br /> 1. FXの魅力と全体像<br /> 2. FX取引の実際<br /> 3. FXの基本的活用<br /> 4. 注文方法とリスク管理<br /> 5. 各通貨の特徴<br /> 6. 通貨の組み合わせ<br /> 7. テクニカル分析(トレンド系1)<br /> 8. テクニカル分析(トレンド系2)<br /> 9. ファンダメンタルズ分析(経済指標)<br /> 10. ファンダメンタルズ分析(政治要因)<br /> 11. テクニカル分析(オシレーター系1)<br /> 12.テクニカル分析(オシレーター系2)<br /> 13.テクニカル指標の組み合わせ<br /> 14. テクノ・ファンダ分析<br /> 15. 資金管理</p> <p><a href="https://www.f-academy.jp/event/210807/?psn=18047">＞＞＞『Bon Booooooot!!』詳細はこちらから</a></p> 
+<hr /> <p></p> 
+<center>
+ 投資ブートキャンプ『Bon Booooooot!!』申込者への２大特典 
+</center><p></p> <p>投資ブートキャンプに参加するには、各スクールのカリキュラム一式（教材＋収録受講）と<br /> LIVE受講（オンラインLIVE受講受け放題）の受講が必要です。そこで、2021年8月4日（水）までの申込みを条件に2大特典を用意しました。</p> <p>【特典1】入学金3万円が無料<br /> ファイナンシャルアカデミーのメインスクールの受講に必要となる入学金の3万円が無料となります。</p> <p>【特典2】受講料が20%OFF<br /> 受講料 378,000円※（税込415,800円）が特別優待価格 302,400円（税込332,640円）となります。<br /> ※カリキュラム一式＋オンラインLIVE受け放題</p> <p>正規価格：408,000円（税込448,800円）<br /> ▷特別優待価格：302,400円（税込332,640円）※116,160円 割引</p> <p>■不動産投資スクール</p> <p>生涯続く家賃収入を手に入れる。卒業生の2人に1人が大家さん。<br /> 物件選び、収支計算、融資、節税、管理、空室対策、リフォームなど、<br /> 不動産投資家になるために必要なスキルをゼロからすべて学べます。</p> <p>入学金： 30,000円→ 0円<br /> 不動産投資スクール カリキュラム一式： 298,000円→ 238,400円<br /> 不動産投資スクールLIVE受講（オンラインLIVE受け放題）： 80,000円→64,000円</p> <p>合計額： 302,400円（税込332,640円）※116,160円 割引</p> <p><a href="https://www.f-academy.jp/trial_fudo">＞＞授業動画を視聴</a>　　　　<a href="https://app.f-academy.jp/cart/add_cart?pack_id=1014&amp;psn=18047">＞＞特別優待での申込みはこちら</a></p> <p>■株式投資スクール</p> <p>根拠ある銘柄選びで受講生の7割以上がプラスの運用実績。<br /> 株の仕組みから銘柄選び、決算書の読み方、売買タイミングまで<br /> 株式投資に必要なノウハウのすべてを体系的・実践的に学べます。</p> <p>入学金： 30,000円→ 0円<br /> 株式投資スクール カリキュラム一式： 298,000円→ 238,400円<br /> 株式投資スクールLIVE受講（オンラインLIVE受け放題）： 80,000円→64,000円</p> <p>合計額： 302,400円（税込332,640円）※116,160円 割引</p> <p><a href="https://www.f-academy.jp/trial_kabu">＞＞授業動画を視聴</a>　　　　<a href="https://app.f-academy.jp/cart/add_cart?pack_id=1015&amp;psn=18047">＞＞特別優待での申込みはこちら</a></p> <p>■外貨投資・FXスクール</p> <p>給与以外の収入源を手に入れる。資金10万円でもできる資産形成。<br /> FXの仕組みから、経済指標の見方、テクニカル分析、リスク管理の方法まで<br /> FXで利益を上げるのに必要なノウハウのすべてを学べます。</p> <p>入学金： 30,000円→ 0円<br /> 不動産投資スクール カリキュラム一式： 298,000円→ 238,400円<br /> 不動産投資スクールLIVE受講（オンラインLIVE受け放題）： 80,000円→64,000円</p> <p>合計額： 302,400円（税込332,640円）※116,160円 割引</p> <p><a href="https://www.f-academy.jp/trial_fx">＞＞授業動画を視聴</a>　　　　<a href="https://app.f-academy.jp/cart/add_cart?pack_id=1016&amp;psn=18047">＞＞特別優待での申込みはこちら</a></p> 
+<hr /> <br /> <br /> <p>スクールを検討するにあたって、学べる内容や授業ついて具体的にイメージしたいという人は「スクール体験セミナー」の視聴がおすすめです。収録動画となっていますので、すぐに視聴することができます。今なら無料で視聴可能です。</p> <p><a href="https://app.f-academy.jp/cart/add_cart?pack_id=470&amp;psn=18047">＞＞＞不動産投資スクール体験セミナーを無料で視聴する</a></p> <p><a href="https://app.f-academy.jp/cart/add_cart?pack_id=469&amp;psn=18047">＞＞＞株式投資スクール体験セミナーを無料で視聴する</a></p> <p><a href="https://app.f-academy.jp/cart/add_cart?pack_id=471&amp;psn=18047">＞＞＞外貨投資・FXスクール体験セミナーを無料で視聴する</a></p> <p>また、8/1（日）の不動産投資スクール体験セミナー（教室開催）ではファイナンシャルアカデミーで不動産投資を学んで実践した受講生が、リアルな体験談をありのまま語る、「ココだけトーク」を実施します。</p> <p>8/1(日)13:00-15:00　有楽町校　<a href="https://www.f-academy.jp/upimage/yurakucho_y.html?psn=18047">＞＞＞地図</a></p> <p>不動産投資を学びたいと考えている人にとっては、またとない機会ですのでご参加ください。定員は20名となりますので、お早めに申込みください。また、貴重な講演となりますので申込後のキャンセルもご遠慮ください。</p> <p><a href="https://app.f-academy.jp/cart/add_cart?no=26067&amp;kosuu=1&amp;psn=18047">＞＞＞8/1（日）の不動産投資スクール体験セミナー（教室開催）を予約する</a></p> 
+<hr /> <br /> <br /> <p>ファイナンシャルアカデミーでは、完全予約制の「入学・受講相談」を実施しています。「入学・受講相談」ではファイナンシャルアカデミー認定講師に直接、1対1で相談することができます。</p> <p>来校だけでなく、オンラインや電話での相談も可能です。講師と相談してから「Bon Booooooot!!」に参加するか決めたいという人は下記から予約いただけます。</p> <p><a href="https://www.f-academy.jp/consul/?psn=18047">＞＞＞入学・受講相談を予約する</a></p> <p>受講したスクールは4日間学びきった後も、2年間は授業が受け放題になります。引き続き学ぶことで、各投資の最新動向をアップデートできることはもちろん、実践しながらの学びは、身につけた知識を、一生使える盤石なスキルへと進化させます。</p> <p>たった4日間で人生を大きく変える学びを手に入れるチャンス。<br /> 時間がある今こそ、未来の自分へ投資しませんか？</p> </td> 
+</tr> 
+</tbody> 
+</table> 
+<!-- bodyここまで --> 
+<!-- フッターここから --> 
+<table class="cont01"> 
+<tbody> 
+<tr> 
+<td class="txtbox01 txt_center"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/ftimg.png" alt="Think Money. Think Life" width="320" height="40" class="hit2" /></td> 
+</tr> 
+<tr> 
+<td class="border01"></td> 
+</tr> 
+<tr> 
+<td id="footer"> <h1><a href="https://www.f-academy.jp/"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/logo.png" alt="Financial Academy" width="210" height="28" /></a></h1> <p class="footertxt"> 東京都千代田区丸の内3-1-1 </p> 
+<table class="table_ft"> 
+<tbody> 
+<tr> 
+<th class="info01" scope="col"> 
+<ul> 
+<li>講座内容や受講に関する問合せ<br /> <a href="tel:0120104384">0120-104-384</a> <br />月-金 9:00-21:00　土日祝 10:00-19:00</li> 
+<li>「マイページ」は<a href="https://www.f-academy.jp/login.html">こちら</a></li> 
+</ul> </th> 
+<th class="info02" scope="col"> 
+<ul> 
+<li><br /> <a href="mailto:info@f-academy.jp">info@f-academy.jp</a> <br />常時受付</li> 
+<li>メルマガ登録は<a href="https://www.f-academy.jp/mailmag.html">こちら</a></li> 
+</ul></th> 
+</tr> 
+</tbody> 
+</table> 
+<div class="clearfix"></div> 
+<div class="txt_center"> 
+<table class="snstable"> 
+<tbody> 
+<tr> 
+<td class="space"></td> 
+<td class="icn_sns"><a href="https://www.facebook.com/financialacademy/"><img src="https://www.f-academy.jp/img2016/mail/sns01.png" alt="facebook" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://twitter.com/facademy"><img src="https://www.f-academy.jp/img2016/mail/sns02.png" alt="twitter" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://www.youtube.com/user/FinancialAcademy"><img src="https://www.f-academy.jp/img2016/mail/sns03.png" alt="youtube" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://www.instagram.com/financial_academy/"><img src="https://www.f-academy.jp/img2016/mail/sns04.png" alt="instagram" width="32" height="28" /></a></td> 
+<td class="space"></td> 
+</tr> 
+</tbody> 
+</table> 
+</div> </td> 
+<!-- #footer/end--> 
+</tr> 
+</tbody> 
+</table> 
+<!-- フッターここまで -->  
+</body>
+</html>
